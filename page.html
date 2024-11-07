@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Arcade Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<audio controls loop src="Marvel vs. Capcom OST Soundtrack - Player Select Theme HD - High Quality.mp3"></audio>
+
+<body>
+    <div class="header">
+        <h1>Retro Arcade Zone</h1>
+    </div>
+
+    <div class="nav">
+        <a href="#Home">Home</a>
+        <a href="#RAC">Recommended Games</a>
+        <a href="Form.html">Forms</a>
+        <a href="#Footer">Contact</a>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="container">
+                <p style="text-align:justify">Welcome to Retro Arcade Zone, where the golden age of gaming comes back to life! Relive the excitement of timeless classics right from your browser. Whether you're a veteran gamer or a newcomer, our collection of iconic arcade games will transport you back to the unforgettable world of pixelated adventures.</p>
+                <img src="https://cdna.artstation.com/p/assets/images/images/058/101/014/original/yurii-ray-mint-white.gif?1673382715" alt="GIF">
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <h1>GAMES</h1>
+
+    <section id="Home">
+    <div class="row">
+        <div class="column">
+            <img src="pngwing.com.png" alt="spaceinv">
+            <p>Defend the earth from waves of alien invaders!</p>
+            <button class="play-btn" onclick="openModal('https://freeinvaders.org')">Play</button>
+        </div>
+        <div class="column">
+            <img src="Pacman_logo_PNG_(2).png" alt="pacman">
+            <p>Help Pac-Man eat all the dots and avoid the ghosts.</p>
+            <button class="play-btn" onclick="openModal('https://freepacman.org')">Play</button>
+        </div>
+        <div class="column">
+            <img src="DK.png" alt="donkeykong">
+            <p>Jump over barrels and rescue the princess from Donkey Kong!</p>
+            <button class="play-btn" onclick="openModal('https://freekong.org')">Play</button>
+        </div>
+        <div class="column">
+            <img src="tekken3.png" alt="tekken">
+            <p>Become the king of the iron fist tournament.</p>
+            <button class="play-btn" onclick="openModal('https://www.miniplay.com/game/tekken-3')">Play</button>
+        </div>
+    </div>
+    </section>
+    </div>
+
+    
+    <div id="gameModal" class="modal">
+        <div id="modalContent" class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <iframe id="gameFrame" src=""></iframe>
+        </div>
+    </div>
+
+    <section id="RAC">
+    <div class="famous-games">
+        <h2>My Top 10 Retro Arcade Games</h2>
+        <table class="games-table">
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Image</th>
+                    <th>Release Year</th>
+                    <th>Developer</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Space Invaders</td>
+                    <td><img src="pngwing.com.png" alt="Space Invaders"></td>
+                    <td>1978</td>
+                    <td>Taito</td>
+                    <td>Players defend Earth from waves of alien invaders.</td>
+                </tr>
+                <tr>
+                    <td>Pac-Man</td>
+                    <td><img src="Pacman_logo_PNG_(2).png" alt="Pac-Man"></td>
+                    <td>1980</td>
+                    <td>Namco</td>
+                    <td>Help Pac-Man eat all dots while avoiding ghosts in the maze.</td>
+                </tr>
+                <tr>
+                    <td>Donkey Kong</td>
+                    <td><img src="DK.png" alt="Donkey Kong"></td>
+                    <td>1981</td>
+                    <td>Nintendo</td>
+                    <td>Jump over barrels to save the princess from Donkey Kong.</td>
+                </tr>
+                <tr>
+                    <td>Tetris</td>
+                    <td><img src="TTS.png" alt="Tetris"></td>
+                    <td>1984</td>
+                    <td>Aleksei Pajitnov</td>
+                    <td>Arrange falling blocks to complete lines and score points.</td>
+                </tr>
+                <tr>
+                    <td>Galaga</td>
+                    <td><img src="GLG.png" alt="Galaga"></td>
+                    <td>1981</td>
+                    <td>Namco</td>
+                    <td>Shoot down insect-like alien ships and rescue captured fighters.</td>
+                </tr>
+                <tr>
+                    <td>Metal Slug</td>
+                    <td><img src="MS.png" alt="Metal Slug"></td>
+                    <td>1996</td>
+                    <td>Nazca Corporation</td>
+                    <td>2D run and gun action shooting game series.</td>
+                </tr>
+                <tr>
+                    <td>Tekken 3</td>
+                    <td><img src="tekken3.png" alt="Tekken3"></td>
+                    <td>1998</td>
+                    <td>Namco</td>
+                    <td>Fight your way to the top and become the king of iron fist tournament.</td>
+                </tr>
+                <tr>
+                    <td>SEGA Rally</td>
+                    <td><img src="SR.png" alt="Sega Rally"></td>
+                    <td>1994</td>
+                    <td>SEGA</td>
+                    <td>Drive your way through various dirt rally race track.</td>
+                </tr>
+                <tr>
+                    <td>Street Fighter II</td>
+                    <td><img src="SF2.png" alt="Street Fighter 2"></td>
+                    <td>1991</td>
+                    <td>Capcom</td>
+                    <td>Experience the intensity of head-to-head battles and various selection of roster.</td>
+                </tr>
+                <tr>
+                    <td>Time Crisis</td> 
+                    <td><img src="TC.png" alt="Defender"></td>
+                    <td>1995</td>
+                    <td>Namco</td>
+                    <td>Go all in guns blazing in this timeless multiplayer shotter.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+
+    <section id="Footer">
+    <div class="footer">
+        <p>Insert Coin to Continue...</p>
+        <p>Lou Liwanag</p>
+        <p>CPN 134</p>
+        <p>n01630199@humber.ca</p>
+    </div>
+    </section>
+
+    <script>
+        function openModal(gameUrl) {
+            document.getElementById('gameFrame').src = gameUrl;
+            document.getElementById('gameModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('gameFrame').src = '';
+            document.getElementById('gameModal').style.display = 'none';
+        }
+
+        const modalContent = document.getElementById('modalContent');
+        modalContent.addEventListener('resize', () => {
+            const iframe = document.getElementById('gameFrame');
+            iframe.style.width = modalContent.clientWidth + 'px';
+            iframe.style.height = modalContent.clientHeight + 'px';
+        });
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('gameModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
