@@ -1,252 +1,265 @@
-/* Custom styles for header */
-.custom-header {
-  background-color: #f7e9d1;
-  text-align: center;
-  padding: 5px 0;
-  font-family: "Times New Roman", Times, serif;
-  position: relative;
-  z-index: 1000;
-}
-.custom-header h1 {
-  font-family: "EB Garamond", serif;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 0;
-}
-.divider-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.divider-line {
-  border-top: 1px solid #d3a35e;
-  margin: 5px 20px;
-  flex: 1;
-}
-.logo-container {
-  display: inline-block;
-  padding: 5px;
-}
-
-/* Navbar styling for desktop */
-.custom-navbar {
-  position: sticky;
-  top: 0; /* Sticks to the top */
-  z-index: 1030; /* Ensures it stays above other elements */
-  background-color: #f7e9d1; /* Background color to avoid transparency issues */
-  font-family: "Times New Roman", Times, serif;
-  text-align: center;
-  padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.custom-navbar .nav-link {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  margin: 0 15px;
-  display: inline-block;
-}
-.custom-navbar .nav-link:hover {
-  color: #000;
-}
-.custom-navbar .nav-link::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #d3a35e;
-  margin-top: 5px;
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-.custom-navbar .nav-link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Mobile-specific styles */
-.mobile-menu-icon {
-  display: none; /* Hide by default */
-}
-
-@media (max-width: 768px) {
-  /* Hide the desktop navbar, dividers, and logo */
-  .divider-container,
-  .logo-container,
-  .custom-navbar {
-    display: none;
+  /* Custom styles for header */
+  .custom-header {
+    background-color: #f7e9d1;
+    text-align: center;
+    padding: 5px 0;
+    font-family: "Times New Roman", Times, serif;
+    position: relative;
+    z-index: 1000;
   }
-  /* Show the mobile menu icon only on mobile */
-  .mobile-menu-icon {
+  .custom-header h1 {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .divider-line {
+    border-top: 1px solid #d3a35e;
+    margin: 5px 20px;
+    flex: 1;
+  }
+  .logo-container {
     display: inline-block;
+    padding: 5px;
+  }
+
+  /* Navbar styling for desktop */
+  .custom-navbar {
+    position: sticky;
+    top: 0; /* Sticks to the top */
+    z-index: 1030; /* Ensures it stays above other elements */
+    background-color: #f7e9d1; /* Background color to avoid transparency issues */
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+    display: inline-block;
+  }
+  .custom-navbar .nav-link:hover {
+    color: #000;
+  }
+  .custom-navbar .nav-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #d3a35e;
+    margin-top: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .custom-navbar .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Mobile-specific styles */
+  .mobile-menu-icon {
+    display: none; /* Hide by default */
+  }
+
+  @media (max-width: 768px) {
+    /* Hide the desktop navbar, dividers, and logo */
+    .divider-container,
+    .logo-container,
+    .custom-navbar {
+      display: none;
+    }
+    /* Show the mobile menu icon only on mobile */
+    .mobile-menu-icon {
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  /* Sidebar menu for mobile */
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #808080; /* Champagne color */
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1001;
+  }
+  .sidebar a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "EB Garamond", serif;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #d3a35e;
+  }
+  .sidebar .close-btn {
     position: absolute;
-    left: 10px;
     top: 10px;
+    right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
   }
-}
+  /* Custom styles for "The House" section */
+  .house-section {
+    text-align: center;
+    font-family: "EB Garamond", serif;
+    padding: 20px;
+  }
 
-/* Sidebar menu for mobile */
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #808080; /* Champagne color */
-  overflow-x: hidden;
-  transition: 0.3s;
-  padding-top: 60px;
-  z-index: 1001;
-}
-.sidebar a {
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-family: "EB Garamond", serif;
-  color: #000;
-  display: block;
-  transition: 0.3s;
-}
-.sidebar a:hover {
-  color: #d3a35e;
-}
-.sidebar .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-/* Custom styles for "The House" section */
-.house-section {
-  text-align: center;
-  font-family: "EB Garamond", serif;
-  padding: 20px;
-}
-
-.image-container img {
-  width: 100%; /* Full width of the container */
-  height: 600px; /* Doubled the height of the image */
-  object-fit: cover; /* Ensures the image scales proportionally while cropping */
-  display: block;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.golden-line {
-  width: 80em; /* Length of the line */
-  height: 2px; /* Thickness of the line */
-  background-color: #d3a35e; /* Golden color */
-  margin: 15px auto; /* Center the line and add spacing */
-}
-
-.house-section h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #000;
-  margin-top: 20px;
-}
-
-.house-section p {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-  max-width: 600px; /* Limits the text width for better readability */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
   .image-container img {
-    height: 400px; /* Adjusted smaller height for smaller screens */
+    width: 100%; /* Full width of the container */
+    height: 600px; /* Doubled the height of the image */
+    object-fit: cover; /* Ensures the image scales proportionally while cropping */
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .golden-line {
+    width: 80em; /* Length of the line */
+    height: 2px; /* Thickness of the line */
+    background-color: #d3a35e; /* Golden color */
+    margin: 15px auto; /* Center the line and add spacing */
   }
 
   .house-section h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+    margin-top: 20px;
   }
 
   .house-section p {
-    font-size: 0.9rem;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 600px; /* Limits the text width for better readability */
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-/* Dual-section styling */
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .image-container img {
+      height: 400px; /* Adjusted smaller height for smaller screens */
+    }
+
+    .house-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .house-section p {
+      font-size: 0.9rem;
+    }
+  }
+   /* Dual-section styling */
 .dual-section {
-  display: flex;
-  flex-wrap: nowrap; /* Ensures items stay in a row on larger screens */
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
+display: flex;
+flex-wrap: nowrap; /* Ensures items stay in a row on larger screens */
+justify-content: space-between;
+gap: 20px;
+padding: 20px;
 }
 
 .card {
-  flex: 1 1 45%; /* Ensures each card takes up 45% of the row */
-  text-align: center;
-  font-family: "EB Garamond", serif;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+flex: 1 1 45%; /* Ensures each card takes up 45% of the row */
+text-align: center;
+font-family: "EB Garamond", serif;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transitions */
+}
+
+.card:hover {
+transform: translateY(-10px); /* Slight upward movement */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .card-image-container {
-  width: 100%; /* Full width of the card */
-  height: 450px; /* Adjusted height to make cards fit better */
-  overflow: hidden;
-  border-radius: 20px;
-  margin-bottom: 20px;
+width: 100%; /* Full width of the card */
+height: 450px; /* Adjusted height to make cards fit better */
+overflow: hidden;
+border-radius: 20px;
+margin-bottom: 20px;
+transition: transform 0.3s; /* Smooth zoom-in effect on hover */
+}
+
+.card:hover .card-image-container img {
+transform: scale(1.1); /* Zoom in the image slightly */
+filter: brightness(1.2); /* Make the image slightly brighter */
 }
 
 .card-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures image fits proportionally */
-  border-radius: 20px;
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensures image fits proportionally */
+border-radius: 20px;
+transition: transform 0.3s, filter 0.3s; /* Smooth image transitions */
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #000;
+font-size: 1.5rem;
+margin-bottom: 10px;
+color: #000;
 }
 
 .card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
-  max-width: 400px;
-  margin: 0 auto 20px;
+font-size: 1rem;
+color: #555;
+line-height: 1.5;
+max-width: 400px;
+margin: 0 auto 20px;
 }
 
 .discover-link {
-  font-size: 1rem;
-  color: #d3a35e; /* Golden color */
-  text-decoration: none;
-  font-weight: bold;
+font-size: 1rem;
+color: #d3a35e; /* Golden color */
+text-decoration: none;
+font-weight: bold;
 }
 
 .discover-link:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
-  .dual-section {
-    flex-direction: column; /* Stacks cards in a column on smaller screens */
-  }
+.dual-section {
+  flex-direction: column; /* Stacks cards in a column on smaller screens */
+}
 
-  .card {
-    flex: 1 1 100%; /* Full width */
-  }
+.card {
+  flex: 1 1 100%; /* Full width */
+}
 
-  .card-image-container {
-    height: 300px; /* Smaller image height for mobile */
-  }
+.card-image-container {
+  height: 300px; /* Smaller image height for mobile */
+}
 }
