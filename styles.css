@@ -4,8 +4,7 @@
     text-align: center;
     padding: 10px 0;
     font-family: "EB Garamond", serif;
-    position: relative;
-    z-index: 1000;
+    top: 0;
   }
   .custom-header h1 {
     font-family: "EB Garamond", serif;
@@ -18,6 +17,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .divider-line {
     border-top: 1px solid #d3a35e;
     margin: 5px 20px;
@@ -34,7 +34,9 @@
     font-family: "EB Garamond", serif;
     text-align: center;
     padding: 10px 0;
+    top: 150px;
   }
+
   .custom-navbar .nav-link {
     font-size: 1rem;
     font-weight: bold;
@@ -43,6 +45,7 @@
     margin: 0 15px;
     display: inline-block;
   }
+
   .custom-navbar .nav-link:hover {
     color: #000;
   }
@@ -58,6 +61,13 @@
   }
   .custom-navbar .nav-link:hover::after {
     transform: scaleX(1);
+  }
+
+  .custom-navbar, .custom-header {
+    transition: transform 0.3s ease-in-out;
+    position:sticky;
+    width: 100%;
+    z-index: 1000;
   }
 
   /* Mobile-specific styles */
@@ -121,6 +131,7 @@
   body, html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
 
   .container_1{

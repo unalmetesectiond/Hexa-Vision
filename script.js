@@ -1,3 +1,4 @@
+
 function openSidebar() {
   document.getElementById("sidebar").style.width = "250px";
 }
@@ -5,3 +6,4 @@ function openSidebar() {
 function closeSidebar() {
   document.getElementById("sidebar").style.width = "0";
 }
+
