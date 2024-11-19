@@ -4,271 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hexa Vision Watches</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-       body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f3eb;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            justify-content: center;
-            background-color: #e5d6c3;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-        }
-        .navbar .menu {
-            display: flex;
-            gap: 20px;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            color: #a07c59;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            .navbar .menu {
-                display: none;
-                flex-direction: column;
-                background-color: #e5d6c3;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 15px 0;
-            }
-            .navbar .menu.open {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-        }
-        .header {
-            text-align: center;
-            padding: 45px 0;
-            background-color: #e5d6c3;
-            font-size: 36px;
-            font-weight: bold;
-        }
-        .main-content {
-            text-align: center;
-            padding: 50px;
-        }
-        .image-section {
-            width: 100%;
-        }
-        .image-section img {
-            width: 100%;
-            height: auto;
-        }
-        .text-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding-top: 30px;
-        }
-        .cards-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px 20px;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 20px;
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .card h3 {
-            margin-top: 15px;
-            font-size: 20px;
-            color: #333;
-        }
-        .card p {
-            color: #777;
-            font-size: 16px;
-        }
-        .latest-watch-section, .longevity-section, .savoir-faire-section, .find-my-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px;
-            gap: 30px;
-            margin-left: 0;
-        }
-        .latest-watch-section img, .longevity-section img, .savoir-faire-section img, .find-my-section img {
-            max-width: 60%;
-            height: auto;
-            margin-left: 0;
-        }
-        .latest-watch-text, .longevity-text, .savoir-faire-text, .find-my-text {
-            max-width: 400px;
-        }
-        .latest-watch-text h3, .longevity-text h3, .savoir-faire-text h3, .find-my-text h3 {
-            font-size: 24px;
-            color: #333;
-        }
-        .latest-watch-text p, .longevity-text p, .savoir-faire-text p, .find-my-text p {
-            color: #777;
-            font-size: 16px;
-            margin: 20px 0;
-        }
-        .discover-button, .find-salon-button {
-            background-color: transparent;
-            border: 2px solid #FFD700;
-            color: #333;
-            padding: 10px 20px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .discover-button:hover, .find-salon-button:hover {
-            background-color: #FFD700;
-            color: #fff;
-        }
-        .branches-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f7f3;
-}
-
-.branches-section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.branches-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.branch-item {
-    background-color: #fff;
-    border: 1px solid #e5d6c3;
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.branch-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-.branch-item h3 {
-    font-size: 20px;
-    color: #333;
-    margin: 0;
-}
-
-.branch-description {
-    font-size: 14px;
-    color: #777;
-    margin-top: 15px;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.branch-item:hover .branch-description {
-    opacity: 1;
-    max-height: 200px; /* Adjust as needed */
-}
-
-        .footer {
-            background-color: #333;
-            color: #ccc;
-            padding: 50px;
-            text-align: center;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .footer-section {
-            margin: 20px;
-        }
-        .footer-section h4 {
-            color: #fff;
-            margin-bottom: 15px;
-        }
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .footer-section a:hover {
-            color: #FFD700;
-        }
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            margin: 5px;
-        }
-        .slide-in {
-        opacity: 0;
-        transform: translateX(100px); /* Slide from the right by default */
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .slide-in.visible {
-        opacity: 1;
-        transform: translateX(0); /* Slide into place */
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const menu = document.querySelector('.menu');
-
-            menuToggle.addEventListener('click', function() {
-                menu.classList.toggle('open');
-            });
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-    const slideInElements = document.querySelectorAll('.slide-in');
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); 
-            }
-        });
-    }, { threshold: 0.1 });
-
-    slideInElements.forEach(el => observer.observe(el));
-});
-  b
-    </script>
+    <link rel="stylesheet" href="AmirAlipour_styles.css">
+      
 </head>
 <body>
     <!-- Navbar -->
@@ -292,7 +29,7 @@
     <!-- Main Content Section -->
     <div class="main-content">
         <div class="image-section">
-            <img src="hero.jpg" alt="Hexa Vision Watch" />
+            <img src="images/hero.jpg" alt="Hexa Vision Watch" />
         </div>
         <div class="text-section">
             <h2>Watches</h2>
@@ -307,24 +44,43 @@
     <!-- Cards Section -->
     <div class="cards-section">
         <div class="card">
-            <img src="images/1.webp" alt="Card Image">
-            <h3>Card Title 1</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <img src="images/lightblue.webp" alt="Card Image">
+            <h3>Timeless Elegance</h3>
+            <p>A watch that speaks sophistication, perfect for formal occasions.</p>
         </div>
         <div class="card">
             <img src="images/11.webp" alt="Card Image">
-            <h3>Card Title 2</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <h3>Modern Chronograph</h3>
+            <p>Designed for precision and style, suitable for any adventure.</p>
         </div>
         <div class="card">
-            <img src="images/2.avif" alt="Card Image">
-            <h3>Card Title 3</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <img src="images/blu.webp" alt="Card Image">
+            <h3>Vintage Classic</h3>
+            <p>Inspired by timeless designs, ideal for everyday wear.</p>
+        </div>
+        <div class="card">
+            <img src="images/grey.webp " alt="Card Image">
+            <h3>Diamond Luxe</h3>
+            <p>A sparkling timepiece that combines elegance and glamour.</p>
+        </div>
+        <div class="card">
+            <img src="images/gold.webp" alt="Card Image">
+            <h3>Moonphase Marvel</h3>
+            <p>Showcasing lunar cycles with a touch of celestial artistry.</p>
+        </div>
+        <div class="card">
+            <img src="images/brown.webp" alt="Card Image">
+            <h3>Sporty Explorer</h3>
+            <p>Built for durability and performance, ready for the outdoors.</p>
+        </div><div class="card">
+            <img src="images/galactic.webp" alt="Card Image">
+            <h3>Galactic Voyager</h3>
+            <p>A futuristic design inspired by the mysteries of the cosmos.</p>
         </div>
         <div class="card">
             <img src="images/2.webp" alt="Card Image">
-            <h3>Card Title 4</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <h3>Royal Enchantment</h3>
+            <p>A regal watch adorned with intricate details and luxurious accents.</p>
         </div>
     </div>
 
@@ -335,36 +91,56 @@
             <p>To perpetuate a heritage dating back from 1755 and support its clients with their evolving needs, Hexa Vision offers an extensive range of services that ensure the longevity of its timepieces.</p>
             <button class="discover-button">Discover</button>
         </div>
-        <img src="" alt="Longevity Image">
+        <img src="images/longe as a compass.avif" alt="Longevity Image">
     </div>
 
     <!-- Remaining Cards Section -->
     <div class="cards-section">
         <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Card Image">
-            <h3>Card Title 5</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <img src="images/dimond blue.webp" alt="Card Image">
+            <h3>Heritage Collection</h3>
+            <p>A tribute to classic craftsmanship and enduring quality.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Card Image">
-            <h3>Card Title 6</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <img src="images/light green.webp" alt="Card Image">
+            <h3>Minimalist Design</h3>
+            <p>Sleek and simple, a perfect addition to a modern wardrobe.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Card Image">
-            <h3>Card Title 7</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <img src="images/green diamond.webp" alt="Card Image">
+            <h3>Artistic Fusion</h3>
+            <p>Where creativity meets horology, a masterpiece on your wrist.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Card Image">
-            <h3>Card Title 8</h3>
-            <p>Card description goes here. Brief and concise.</p>
+            <img src="images/drkblue.webp" alt="Card Image">
+            <h3>Masterpiece Automatic</h3>
+            <p>Self-winding precision in a luxurious design.</p>
+        </div>
+        <div class="card">
+            <img src="images/black.webp" alt="Card Image">
+            <h3>Bold Statement</h3>
+            <p>An iconic design for those who love to stand out.</p>
+        </div>
+        <div class="card">
+            <img src="images/1.webp" alt="Card Image">
+            <h3>Urban Charm</h3>
+            <p>A stylish companion for the modern city dweller.</p>
+        </div>
+        <div class="card">
+            <img src="images/cd702666-dad8-4f9a-bf91-0634c989c29f.webp" alt="Card Image">
+            <h3>Luxe Precision</h3>
+            <p>Combining precision engineering with opulent design for a flawless look.</p>
+        </div>
+        <div class="card">
+            <img src="images/gld.webp" alt="Card Image">
+            <h3>Avant-Garde Style</h3>
+            <p>A futuristic approach to timekeeping, bold and innovative.</p>
         </div>
     </div>
 
     <!-- Latest Watch Section -->
     <div class="latest-watch-section slide-in">
-        <img src="Latest Watch Models.avif" alt="Latest Watch">
+        <img src="images/Latest Watch Models.avif" alt="Latest Watch">
         <div class="latest-watch-text">
             <h3>Latest Watch Models</h3>
             <p>Enter an extraordinary world of brilliance and refinement with the latest models unveiled by Hexa Vision.</p>
@@ -379,12 +155,12 @@
             <p>Hexa Vision reinterprets time with elegance, through exceptional creations that combine its watchmaking know-how with its gem-setting expertise.</p>
             <button class="discover-button">Discover</button>
         </div>
-        <img src="/mnt/data/image.png" alt="Savoir-Faire Image">
+        <img src="images/savoir.webp" alt="Savoir-Faire Image">
     </div>
 
     <!-- Find My Hexa Vision Section -->
     <div class="find-my-section slide-in">
-        <img src="/mnt/data/image.png" alt="Find My Hexa Vision">
+        <img src="images/find.webp" alt="Find My Hexa Vision">
         <div class="find-my-text">
             <h3>Find My Hexa Vision</h3>
             <p>We look forward to welcoming you to the extraordinary world of Hexa Vision, where our legacy becomes yours.</p>
@@ -432,6 +208,10 @@
                 <h3>Singapore</h3>
                 <p class="branch-description">Experience elegance and precision at our Marina Bay Sands branch in Singapore.</p>
             </div>
+            <div class="branch-item">
+                <h3>Miami</h3>
+                <p class="branch-description">Find the perfect timepiece at our Bayview street branch in downtown Miami.</p>
+            </div>
         </div>
     </div>
     
@@ -472,5 +252,6 @@
                 ICP number 86ICPh1784601l-6</p>
         </div>
     </div>
+    <script src="AmirAlipour_scripts.js"></script>
 </body>
 </html>
