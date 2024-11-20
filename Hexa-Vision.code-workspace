@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Hexa-Vision",
+			"path": "."
+		},
+		{
+			"name": "meteimages",
+			"path": "../../cpan134/group project/meteimages"
+		}
+	],
+	"settings": {}
+}
