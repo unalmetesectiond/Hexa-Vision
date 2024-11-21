@@ -67,6 +67,56 @@
   }
   
   /* Mobile-specific styles */
+  .mobile-header{
+    display: none;
+  }
+
+@media (max-width: 768px) {
+  /* Hide the desktop navbar, dividers, and logo */
+  .divider-container,
+  .logo-container,
+  .custom-navbar,
+  .custom-header {
+    display: none;
+  }
+
+  /* Mobile Header */
+  .mobile-header {
+    display: block; /* Show the mobile header on mobile */
+    background-color: #f7e9d1;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1040; /* Ensure the header is above other content */
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center the header content horizontally */
+    align-items: center; /* Center the header content vertically */
+  }
+
+  .mobile-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  /* Mobile Menu Icon */
+  .mobile-menu-icon {
+    position: fixed;
+    display: inline-block;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1050; /* Ensure the icon stays above other elements */
+  }
+}
+
+  /* Mobile-specific styles */
   .mobile-menu-icon {
     display: none; /* Hide by default */
   }
