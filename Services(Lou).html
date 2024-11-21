@@ -21,8 +21,6 @@
   <body>
     <!-- Header Section -->
     <header class="custom-header">
-      <!-- Mobile menu icon for opening sidebar in mobile view -->
-      <span class="mobile-menu-icon" onclick="openSidebar()">&#9776;</span>
       <h1>HEXA VISION</h1>
       <div class="divider-container">
         <div class="divider-line"></div>
@@ -55,6 +53,12 @@
       <a href="#" class="nav-link">SERVICES</a>
     </nav>
 
+    <!-- Mobile Header Section (Visible only on mobile) -->
+    <header class="mobile-header">
+      <h1>HEXA VISION</h1>
+      <span class="mobile-menu-icon" onclick="openSidebar()">&#9776;</span>
+    </header>
+
     <!-- Sidebar for Mobile View -->
     <div id="sidebar" class="sidebar">
       <span class="close-btn" onclick="closeSidebar()">&times;</span>
@@ -65,7 +69,8 @@
       <a href="#">ACCESSORIES</a>
       <a href="#">SERVICES</a>
     </div>
-    
+  </div>  
+
     <section class="client-services-section">
       <div class="image-container">
         <img src="images/img1.jpg" alt="Client Services" class="responsive-image">
