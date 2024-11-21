@@ -238,7 +238,6 @@
        .branch-item:hover .branch-description {
            opacity: 1;
            max-height: 200px;
-           /* Adjust as needed */
        }
 
        .footer {
@@ -280,12 +279,10 @@
        .slide-in {
            opacity: 0;
            transform: translateX(100px);
-           /* Slide from the right by default */
-           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
        }
 
        .slide-in.visible {
            opacity: 1;
            transform: translateX(0);
-           /* Slide into place */
-       }
+           }
