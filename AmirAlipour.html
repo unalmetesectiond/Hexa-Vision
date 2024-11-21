@@ -1,255 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hexa Vision Watches</title>
-    <link rel="stylesheet" href="AmirAlipour.css">
-    </head>
-<body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="menu-toggle">☰</div>
-        <div class="menu">
-            <a href="f">The House</a>
-            <a href="#">High Jewelry</a>
-            <a href="#">Engagement and Bridal</a>
-            <a href="#">Watches</a>
-            <a href="#">Accessories</a>
-            <a href="#">Services</a>
-        </div>
-    </div>
 
-    <!-- Header -->
-    <div class="header">
-        HEXA VISION
+    <link rel="stylesheet" href="AmirAlipour.css" />
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+
+  <body>
+    <header class="custom-header">
+      <!-- Mobile menu icon for opening sidebar in mobile view -->
+      <span class="mobile-menu-icon" onclick="openSidebar()">&#9776;</span>
+      <h1>HEXA-VISION</h1>
+      <div class="divider-container">
+        <div class="divider-line"></div>
+        <div class="logo-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 28 43"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M20.63 0H7.198L6.17.426.427 6.14 0 7.164v28.183l.427 1.023 5.744 5.716 1.027.424H20.68l1.026-.424 5.742-5.716.428-1.023V7.164L27.45 6.14 21.708.426 20.682 0h-.052zm-.054.526l.838.343 5.592 5.568.344.832v27.97l-.344.833-5.592 5.568-.838.342H7.305l-.838-.342-5.592-5.568-.348-.833V7.27l.348-.832L6.467.87l.838-.343h13.27zm-2.3 9.382l.014-.005c.053 0 .095-.04.095-.092V9.7c0-.05-.042-.093-.095-.093h-.43V9.6h-1.275v.003h-.437c-.054 0-.095.04-.095.093v.1c0 .05.04.095.095.095l.013.005c.232 0 .42.186.42.416l.005-.018V14.2h-.005c0 .257-.17.46-.386.48h-4.5c-.206-.018-.372-.2-.386-.45V10.3a.42.42 0 0 1 .418-.391l.014-.005c.054 0 .096-.04.096-.092V9.7c0-.05-.042-.093-.096-.093h-.43V9.6h-1.274v.003H9.6c-.054 0-.095.04-.095.093v.1c0 .05.04.095.095.095l.013.005a.42.42 0 0 1 .419.416l.004-.018-.004 9.673a.42.42 0 0 1-.419.416L9.6 20.4c-.054 0-.095.04-.095.093v.1c0 .048.04.092.095.092h.436v.002h1.705c.054 0 .096-.042.096-.093v-.1c0-.053-.042-.096-.096-.096h-.014a.42.42 0 0 1-.418-.39v-4.236c.014-.218.15-.398.33-.44h4.62c.2.045.332.24.332.474l.005-.012v4.2l-.005-.02c0 .23-.187.416-.42.416l-.013.007c-.054 0-.095.04-.095.093v.1c0 .048.04.092.095.092h.437v.002h1.706c.053 0 .095-.042.095-.093v-.1c0-.053-.042-.096-.095-.096h-.014a.42.42 0 0 1-.417-.4V10.3c.01-.217.194-.4.417-.4M21.8 23.34h-1.97a.1.1 0 0 0-.096.096v.1c0 .053.046.093.096.093l.35.003h.054c.18 0 .2.057.1.327l-3.04 7.46s-.066.15-.194.15c-.115 0-.194-.123-.2-.147l-1.876-4.142 1.386-3.45s.1-.23.6-.23l.114-.002c.053 0 .095-.04.095-.096v-.1c0-.05-.042-.093-.095-.093H15.12c-.05 0-.094.044-.094.093v.1c0 .054.043.096.094.096l.35.002h.054c.182 0 .202.057.093.328l-.945 2.328c-.014.018-.036.038-.07.038s-.064-.03-.074-.048L13.43 23.83c-.13-.233-.05-.23.125-.23h.28l.2-.002c.05 0 .095-.04.095-.096v-.1c0-.05-.044-.093-.095-.093h-2.7c-.054 0-.1.044-.1.093v.1c0 .054.046.096.1.096l.114.002c.372 0 .47.242.47.242l1.975 4.307-1.362 3.348c-.035.04-.098.1-.173.1-.12 0-.175-.153-.175-.153s-.007.007-.015.02L8.4 24.116c-.087-.212-.27-.502-.096-.502h.28l.2-.002c.053 0 .098-.04.098-.096v-.1c0-.05-.045-.093-.098-.093H6.088c-.05 0-.094.044-.094.093v.1c0 .054.042.096.094.096l.116.002c.368 0 .467.242.467.242L11.93 34.3l.017.043s.034.06.088.06.1-.013.118-.06v.01l2.14-5.322 2.398 5.23.027.08s.03.058.087.058.1-.012.122-.062c.003-.005.01-.025.014-.052l4.138-10.4s.093-.23.594-.23l.114-.003c.05 0 .094-.04.094-.093v-.1c0-.05-.044-.096-.094-.096m-1.27-21.525l-.436-.002H7.36l-5.513 5.5v27.858l5.513 5.5h13.158l5.512-5.5V7.325L20.518 1.84zm4.34 32.43v.382l-4.82 4.797H7.86L3.04 34.65V7.765l4.82-4.798h12.178l4.82 4.798V34.27z"
+            ></path>
+          </svg>
+        </div>
+        <div class="divider-line"></div>
+      </div>
+    </header>
+
+    <!-- Sticky Navbar Section for Desktop -->
+    <nav class="custom-navbar sticky-top">
+      <a
+        href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/Nirvair-Singh-Sahi.html"
+        class="nav-link"
+        >THE HOUSE</a
+      >
+      <a href="#" class="nav-link">HIGH JEWELRY</a>
+      <a href="#" class="nav-link">ENGAGEMENT & BRIDAL</a>
+      <a href="#" class="nav-link">WATCHES</a>
+      <a href="#" class="nav-link">ACCESSORIES</a>
+      <a href="#" class="nav-link">SERVICES</a>
+    </nav>
+
+    <!-- Sidebar for Mobile View -->
+    <div id="sidebar" class="sidebar">
+      <span class="close-btn" onclick="closeSidebar()">&times;</span>
+      <a
+        href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/Nirvair-Singh-Sahi.html"
+        >THE HOUSE</a
+      >
+      <a href="#">HIGH JEWELRY</a>
+      <a href="#">ENGAGEMENT AND BRIDAL</a>
+      <a href="#">WATCHES</a>
+      <a href="#">ACCESSORIES</a>
+      <a href="#">SERVICES</a>
     </div>
 
     <!-- Main Content Section -->
     <div class="main-content">
-        <div class="image-section">
-            <img src="images/hero.jpg" alt="Hexa Vision Watch" />
-        </div>
-        <div class="text-section">
-            <h2>Watches</h2>
-            <p>
-                Time has many different facets and the House of Hexa Vision reinterprets it in the most unique ways. 
-                From delightful to surprising, timeless to modern, Hexa Vision's exceptional timepieces combine the House's watch-making prowess with 
-                its gem-setting expertise, demonstrating a one-of-a-kind creativity in craftsmanship and design. Enter a world of pure luxury and elegance.
-            </p>
-        </div>
+      <div class="image-section">
+        <img src="images/0-hero.jpg" alt="Hexa Vision Watch" />
+      </div>
+      <div class="text-section">
+        <h1>Watches</h1>
+        <p>
+          Time has many different facets and the House of Hexa Vision
+          reinterprets it in the most unique ways. From delightful to
+          surprising, timeless to modern, Hexa Vision's exceptional timepieces
+          combine the House's watch-making prowess with its gem-setting
+          expertise, demonstrating a one-of-a-kind creativity in craftsmanship
+          and design. Enter a world of pure luxury and elegance.
+        </p>
+      </div>
     </div>
 
     <!-- Cards Section -->
     <div class="cards-section">
-        <div class="card">
-            <img src="images/lightblue.webp" alt="Card Image">
-            <h3>Timeless Elegance</h3>
-            <p>A watch that speaks sophistication, perfect for formal occasions.</p>
-        </div>
-        <div class="card">
-            <img src="images/11.webp" alt="Card Image">
-            <h3>Modern Chronograph</h3>
-            <p>Designed for precision and style, suitable for any adventure.</p>
-        </div>
-        <div class="card">
-            <img src="images/blu.webp" alt="Card Image">
-            <h3>Vintage Classic</h3>
-            <p>Inspired by timeless designs, ideal for everyday wear.</p>
-        </div>
-        <div class="card">
-            <img src="images/grey.webp " alt="Card Image">
-            <h3>Diamond Luxe</h3>
-            <p>A sparkling timepiece that combines elegance and glamour.</p>
-        </div>
-        <div class="card">
-            <img src="images/gold.webp" alt="Card Image">
-            <h3>Moonphase Marvel</h3>
-            <p>Showcasing lunar cycles with a touch of celestial artistry.</p>
-        </div>
-        <div class="card">
-            <img src="images/brown.webp" alt="Card Image">
-            <h3>Sporty Explorer</h3>
-            <p>Built for durability and performance, ready for the outdoors.</p>
-        </div><div class="card">
-            <img src="images/galactic.webp" alt="Card Image">
-            <h3>Galactic Voyager</h3>
-            <p>A futuristic design inspired by the mysteries of the cosmos.</p>
-        </div>
-        <div class="card">
-            <img src="images/2.webp" alt="Card Image">
-            <h3>Royal Enchantment</h3>
-            <p>A regal watch adorned with intricate details and luxurious accents.</p>
-        </div>
+      <div class="card">
+        <img src="images/2-1.webp" alt="Card Image" />
+        <h3>Timeless Elegance</h3>
+        <p>A watch that speaks sophistication, perfect for formal occasions.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-2.webp" alt="Card Image" />
+        <h3>Modern Chronograph</h3>
+        <p>Designed for precision and style, suitable for any adventure.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-3.webp" alt="Card Image" />
+        <h3>Vintage Classic</h3>
+        <p>Inspired by timeless designs, ideal for everyday wear.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-4.webp " alt="Card Image" />
+        <h3>Diamond Luxe</h3>
+        <p>A sparkling timepiece that combines elegance and glamour.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-5.webp" alt="Card Image" />
+        <h3>Moonphase Marvel</h3>
+        <p>Showcasing lunar cycles with a touch of celestial artistry.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-6.webp" alt="Card Image" />
+        <h3>Sporty Explorer</h3>
+        <p>Built for durability and performance, ready for the outdoors.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-7.webp" alt="Card Image" />
+        <h3>Galactic Voyager</h3>
+        <p>A futuristic design inspired by the mysteries of the cosmos.</p>
+      </div>
+      <div class="card">
+        <img src="images/2-8.avif" alt="Card Image" />
+        <h3>Royal Enchantment</h3>
+        <p>
+          A regal watch adorned with intricate details and luxurious accents.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/2-9.webp" alt="Card Image" />
+        <h3>Gradient Beauty</h3>
+        <p>
+          An exquisite timepiece crafted for those who appreciate sophistication
+          and style.
+        </p>
+      </div>
     </div>
 
     <!-- Longevity Section -->
     <div class="longevity-section slide-in">
-        <div class="longevity-text">
-            <h3>Longevity as a Compass</h3>
-            <p>To perpetuate a heritage dating back from 1755 and support its clients with their evolving needs, Hexa Vision offers an extensive range of services that ensure the longevity of its timepieces.</p>
-            <button class="discover-button">Discover</button>
-        </div>
-        <img src="images/longe as a compass.avif" alt="Longevity Image">
+      <div class="longevity-text">
+        <h3>Longevity as a Compass</h3>
+        <p>
+          To perpetuate a heritage dating back from 1755 and support its clients
+          with their evolving needs, Hexa Vision offers an extensive range of
+          services that ensure the longevity of its timepieces.
+        </p>
+        <button class="discover-button">Discover</button>
+      </div>
+      <img src="images/3.avif" alt="Longevity Image" />
     </div>
 
     <!-- Remaining Cards Section -->
     <div class="cards-section">
-        <div class="card">
-            <img src="images/dimond blue.webp" alt="Card Image">
-            <h3>Heritage Collection</h3>
-            <p>A tribute to classic craftsmanship and enduring quality.</p>
-        </div>
-        <div class="card">
-            <img src="images/light green.webp" alt="Card Image">
-            <h3>Minimalist Design</h3>
-            <p>Sleek and simple, a perfect addition to a modern wardrobe.</p>
-        </div>
-        <div class="card">
-            <img src="images/green diamond.webp" alt="Card Image">
-            <h3>Artistic Fusion</h3>
-            <p>Where creativity meets horology, a masterpiece on your wrist.</p>
-        </div>
-        <div class="card">
-            <img src="images/drkblue.webp" alt="Card Image">
-            <h3>Masterpiece Automatic</h3>
-            <p>Self-winding precision in a luxurious design.</p>
-        </div>
-        <div class="card">
-            <img src="images/black.webp" alt="Card Image">
-            <h3>Bold Statement</h3>
-            <p>An iconic design for those who love to stand out.</p>
-        </div>
-        <div class="card">
-            <img src="images/1.webp" alt="Card Image">
-            <h3>Urban Charm</h3>
-            <p>A stylish companion for the modern city dweller.</p>
-        </div>
-        <div class="card">
-            <img src="images/cd702666-dad8-4f9a-bf91-0634c989c29f.webp" alt="Card Image">
-            <h3>Luxe Precision</h3>
-            <p>Combining precision engineering with opulent design for a flawless look.</p>
-        </div>
-        <div class="card">
-            <img src="images/gld.webp" alt="Card Image">
-            <h3>Avant-Garde Style</h3>
-            <p>A futuristic approach to timekeeping, bold and innovative.</p>
-        </div>
+      <div class="card">
+        <img src="images/1-1.webp" alt="Card Image" />
+        <h3>Heritage Collection</h3>
+        <p>A tribute to classic craftsmanship and enduring quality.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-2.webp" alt="Card Image" />
+        <h3>Minimalist Design</h3>
+        <p>Sleek and simple, a perfect addition to a modern wardrobe.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-3.webp" alt="Card Image" />
+        <h3>Artistic Fusion</h3>
+        <p>Where creativity meets horology, a masterpiece on your wrist.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-4.webp" alt="Card Image" />
+        <h3>Masterpiece Automatic</h3>
+        <p>Self-winding precision in a luxurious design.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-5.webp" alt="Card Image" />
+        <h3>Bold Statement</h3>
+        <p>An iconic design for those who love to stand out.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-6.webp" alt="Card Image" />
+        <h3>Urban Charm</h3>
+        <p>A stylish companion for the modern city dweller.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-7.webp" alt="Card Image" />
+        <h3>Luxe Precision</h3>
+        <p>
+          Combining precision engineering with opulent design for a flawless
+          look.
+        </p>
+      </div>
+      <div class="card">
+        <img src="images/1-8.webp" alt="Card Image" />
+        <h3>Avant-Garde Style</h3>
+        <p>A futuristic approach to timekeeping, bold and innovative.</p>
+      </div>
+      <div class="card">
+        <img src="images/1-9.webp" alt="Card Image" />
+        <h3>Rose Radiance</h3>
+        <p>
+          Elegant and captivating, featuring a rose gold frame and artistic dial
+          work.
+        </p>
+      </div>
     </div>
 
     <!-- Latest Watch Section -->
     <div class="latest-watch-section slide-in">
-        <img src="images/Latest Watch Models.avif" alt="Latest Watch">
-        <div class="latest-watch-text">
-            <h3>Latest Watch Models</h3>
-            <p>Enter an extraordinary world of brilliance and refinement with the latest models unveiled by Hexa Vision.</p>
-            <button class="discover-button">Discover</button>
-        </div>
+      <img src="images/4.JPG" alt="Latest Watch" />
+      <div class="latest-watch-text">
+        <h3>Latest Watch Models</h3>
+        <p>
+          Enter an extraordinary world of brilliance and refinement with the
+          latest models unveiled by Hexa Vision.
+        </p>
+        <button class="discover-button">Discover</button>
+      </div>
     </div>
 
     <!-- Savoir-Faire Section -->
     <div class="savoir-faire-section slide-in">
-        <div class="savoir-faire-text">
-            <h3>Savoir-Faire & Métiers d'Art</h3>
-            <p>Hexa Vision reinterprets time with elegance, through exceptional creations that combine its watchmaking know-how with its gem-setting expertise.</p>
-            <button class="discover-button">Discover</button>
-        </div>
-        <img src="images/savoir.webp" alt="Savoir-Faire Image">
+      <div class="savoir-faire-text">
+        <h3>Savoir-Faire & Métiers d'Art</h3>
+        <p>
+          Hexa Vision reinterprets time with elegance, through exceptional
+          creations that combine its watchmaking know-how with its gem-setting
+          expertise.
+        </p>
+        <button class="discover-button">Discover</button>
+      </div>
+      <img src="images/5.webp" alt="Savoir-Faire Image" />
     </div>
 
     <!-- Find My Hexa Vision Section -->
     <div class="find-my-section slide-in">
-        <img src="images/find.webp" alt="Find My Hexa Vision">
-        <div class="find-my-text">
-            <h3>Find My Hexa Vision</h3>
-            <p>We look forward to welcoming you to the extraordinary world of Hexa Vision, where our legacy becomes yours.</p>
-            <button class="find-salon-button">Find a Salon</button>
-        </div>
+      <img src="images/6.webp" alt="Find My Hexa Vision" />
+      <div class="find-my-text">
+        <h3>Find My Hexa Vision</h3>
+        <p>
+          We look forward to welcoming you to the extraordinary world of Hexa
+          Vision, where our legacy becomes yours.
+        </p>
+        <button class="find-salon-button">Find a Salon</button>
+      </div>
     </div>
 
     <div class="branches-section">
-        <h2>Our Branches</h2>
-        <div class="branches-grid">
-            <!-- Each item -->
-            <div class="branch-item">
-                <h3>New York</h3>
-                <p class="branch-description">Located in the heart of Manhattan, our New York branch offers an exquisite range of timepieces.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Paris</h3>
-                <p class="branch-description">Experience luxury and craftsmanship in our flagship Paris branch near the Champs-Élysées.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Tokyo</h3>
-                <p class="branch-description">A blend of tradition and innovation awaits at our Tokyo branch in Ginza.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Dubai</h3>
-                <p class="branch-description">Discover unparalleled luxury at our branch in the Dubai Mall.</p>
-            </div>
-            <div class="branch-item">
-                <h3>London</h3>
-                <p class="branch-description">Our London branch in Mayfair combines heritage with modern elegance.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Hong Kong</h3>
-                <p class="branch-description">Explore timeless sophistication in our Hong Kong branch at Central.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Sydney</h3>
-                <p class="branch-description">Find the perfect timepiece at our Sydney branch in the Opera House precinct.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Berlin</h3>
-                <p class="branch-description">Modern design meets luxury at our Berlin branch in Kurfürstendamm.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Singapore</h3>
-                <p class="branch-description">Experience elegance and precision at our Marina Bay Sands branch in Singapore.</p>
-            </div>
-            <div class="branch-item">
-                <h3>Miami</h3>
-                <p class="branch-description">Find the perfect timepiece at our Bayview street branch in downtown Miami.</p>
-            </div>
+      <h2>Our Branches</h2>
+      <div class="branches-grid">
+        <!-- Each item -->
+        <div class="branch-item">
+          <h3>New York</h3>
+          <p class="branch-description">
+            Located in the heart of Manhattan, our New York branch offers an
+            exquisite range of timepieces.
+          </p>
         </div>
+        <div class="branch-item">
+          <h3>Paris</h3>
+          <p class="branch-description">
+            Experience luxury and craftsmanship in our flagship Paris branch
+            near the Champs-Élysées.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Tokyo</h3>
+          <p class="branch-description">
+            A blend of tradition and innovation awaits at our Tokyo branch in
+            Ginza.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Dubai</h3>
+          <p class="branch-description">
+            Discover unparalleled luxury at our branch in the Dubai Mall.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>London</h3>
+          <p class="branch-description">
+            Our London branch in Mayfair combines heritage with modern elegance.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Hong Kong</h3>
+          <p class="branch-description">
+            Explore timeless sophistication in our Hong Kong branch at Central.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Sydney</h3>
+          <p class="branch-description">
+            Find the perfect timepiece at our Sydney branch in the Opera House
+            precinct.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Berlin</h3>
+          <p class="branch-description">
+            Modern design meets luxury at our Berlin branch in Kurfürstendamm.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Singapore</h3>
+          <p class="branch-description">
+            Experience elegance and precision at our Marina Bay Sands branch in
+            Singapore.
+          </p>
+        </div>
+        <div class="branch-item">
+          <h3>Miami</h3>
+          <p class="branch-description">
+            Find the perfect timepiece at our Bayview street branch in downtown
+            Miami.
+          </p>
+        </div>
+      </div>
     </div>
-    
+
     <!-- Footer Section -->
-    <div class="footer">
-        <div class="footer-section">
-            <h4>SERVICES</h4>
-            <a href="#">Schedule an Appointment</a>
-            <a href="#">Request Assistance</a>
-            <a href="#">Subscribe to Newsletters</a>
-            <a href="#">Explore our Catalogs</a>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Change Language -->
+        <div class="footer-language">
+          <span>Change Language</span>
+          <p>ENGLISH</p>
+          <div class="golden-line"></div>
         </div>
-        <div class="footer-section">
-            <h4>CORPORATE</h4>
-            <a href="#">Careers</a>
-            <a href="#">Philanthropy</a>
+
+        <!-- Footer Columns -->
+        <div class="footer-columns">
+          <!-- Services -->
+          <div class="footer-column">
+            <h3>SERVICES</h3>
+            <ul>
+              <li><a href="#">Schedule an Appointment</a></li>
+              <li><a href="#">Request Assistance</a></li>
+              <li><a href="#">Subscribe to Newsletters</a></li>
+              <li><a href="#">Explore our Catalog</a></li>
+            </ul>
+          </div>
+
+          <!-- Corporate -->
+          <div class="footer-column">
+            <h3>CORPORATE</h3>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Philanthropy</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal Terms -->
+          <div class="footer-column">
+            <h3>LEGAL TERMS</h3>
+            <ul>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Notice</a></li>
+              <li><a href="#">Supply Chain</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="footer-social">
+            <h3>FOLLOW US</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/story.php/?story_fbid=1670602513233142&id=1670578309902229&_rdr"
+                ><img src="images/facebook.png" alt="Facebook"
+              /></a>
+              <a href="https://www.instagram.com/hexavision_enhancement/"
+                ><img src="images/instagram.png" alt="Instagram"
+              /></a>
+              <a
+                href="https://x.com/i/flow/login?redirect_after_login=%2Fhexacc"
+                ><img src="images/twitter.png" alt="X"
+              /></a>
+              <a
+                href="https://www.pinterest.com/pin/eye-logo-in-2024--818388563566270932/"
+                ><img src="images/pinterest.png" alt="Pinterest"
+              /></a>
+              <a href="https://www.linkedin.com/company/joinhexa"
+                ><img src="images/linkedin.png" alt="LinkedIn"
+              /></a>
+              <a href="https://www.youtube.com/channel/UC98o6FhZ1cfsNxGN3Cf_0bQ"
+                ><img src="images/youtube.png" alt="YouTube"
+              /></a>
+            </div>
+          </div>
         </div>
-        <div class="footer-section">
-            <h4>LEGAL TERMS</h4>
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cookie Notice</a>
-            <a href="#">Supply Chain</a>
-            <a href="#">Accessibility</a>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>Hexa Vision, Inc. 2024</p>
         </div>
-        <div class="footer-section social-icons">
-            <h4>FOLLOW US</h4>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="Facebook"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="Instagram"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="Twitter"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="LinkedIn"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="YouTube"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="Pinterest"></a>
-        </div>
-        <div class="footer-section">
-            <p>Hexa Vision, Inc. 2024<br>
-                ICP number 86ICPh1784601l-6</p>
-        </div>
-    </div>
-    <script src="AmirAlipour_scripts.js"></script>
-</body>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+      function openSidebar() {
+        document.getElementById("sidebar").style.width = "250px";
+      }
+      function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const slideInElements = document.querySelectorAll(".slide-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        slideInElements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
 </html>
