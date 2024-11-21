@@ -82,7 +82,7 @@
 
   /* Mobile Header */
   .mobile-header {
-    display: block; /* Show the mobile header on mobile */
+    display: block; 
     background-color: #f7e9d1;
     text-align: center;
     font-family: 'EB Garamond', serif;
@@ -92,10 +92,10 @@
     right: 0;
     width: 100%;
     padding: 10px 0;
-    z-index: 1040; /* Ensure the header is above other content */
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Center the header content horizontally */
-    align-items: center; /* Center the header content vertically */
+    z-index: 1040; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
   }
 
   .mobile-header h1 {
@@ -112,17 +112,17 @@
     top: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 1050; /* Ensure the icon stays above other elements */
+    z-index: 1050; 
   }
 }
 
   /* Mobile-specific styles */
   .mobile-menu-icon {
-    display: none; /* Hide by default */
+    display: none; 
   }
   
   @media (max-width: 768px) {
-    /* Hide the desktop navbar, dividers, and logo */
+
     .divider-container,
     .logo-container,
     .custom-navbar {
@@ -516,13 +516,13 @@
   /* Decorative Line and Icon */
 .savoir-bottom-line {
   display: flex;
-  align-items: center; /* Vertically align all elements */
-  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  justify-content: center; 
   margin-top: 40px;
-  gap: 10px; /* Equal spacing between lines and icon */
+  gap: 10px; 
 }
 .golden-line {
-  flex: 1; /* Ensures the lines grow equally */
+  flex: 1; 
   height: 2px;
   background-color: #d3a35e;
 }
@@ -530,13 +530,13 @@
 .rosette-icon {
   width: 24px;
   height: 24px;
-  flex-shrink: 0; /* Prevents the icon from resizing */
+  flex-shrink: 0; 
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .savoir-container {
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column; 
     text-align: center;
   }
 
@@ -557,13 +557,13 @@
   }
 
   .savoir-bottom-line {
-    margin-top: 20px; /* Adjust spacing for smaller screens */
+    margin-top: 20px; 
   }
 }
 
   /* Footer */
   .footer {
-    background-color: #36332D; /* Dark background */
+    background-color: #36332D; 
     color: #fff;
     font-family: "EB Garamond", serif;
     padding: 40px 20px;
