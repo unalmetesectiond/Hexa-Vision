@@ -17,7 +17,7 @@ body {
 .custom-header {
     background-color: #f7e9d1;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     font-family: "Times New Roman", Times, serif;
     position: relative;
     z-index: 1000;
@@ -26,7 +26,7 @@ body {
 .custom-header h1 {
     font-family: "EB Garamond", serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0;
 }
 
@@ -34,15 +34,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .divider-line {
-    border-top: 1px solid #d3a35e;
+    border-top: 2px solid #d3a35e;
     margin: 5px 20px;
     flex: 1;
 }
 
-/* Navbar styling for desktop */
+/* Navbar styling */
 .custom-navbar {
     position: sticky;
     top: 0;
@@ -55,89 +56,18 @@ body {
 }
 
 .custom-navbar .nav-link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #000;
     text-decoration: none;
     margin: 0 15px;
     display: inline-block;
+    transition: color 0.3s, transform 0.2s;
 }
 
 .custom-navbar .nav-link:hover {
-    color: #000;
-}
-
-.custom-navbar .nav-link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #d3a35e;
-    margin-top: 5px;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-}
-
-.custom-navbar .nav-link:hover::after {
-    transform: scaleX(1);
-}
-
-/* Mobile-specific styles */
-.mobile-menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .divider-container,
-    .custom-navbar {
-        display: none;
-    }
-
-    .mobile-menu-icon {
-        display: inline-block;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-    }
-}
-
-/* Sidebar menu for mobile */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #808080;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1001;
-}
-
-.sidebar a {
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: "EB Garamond", serif;
-    color: #000;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
     color: #d3a35e;
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -147,7 +77,7 @@ body {
     color: #fff;
     padding: 50px 20px;
     background: url('Khant_images/main\ pic.webp') center/cover no-repeat;
-    height: 400px;
+    height: 450px;
 }
 
 .hero-overlay {
@@ -164,12 +94,27 @@ body {
 }
 
 .hero-overlay h1 {
-    font-size: 36px;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .hero-overlay p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #d3a35e;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #b08d5c;
 }
 
 /* Section Styling */
@@ -179,13 +124,13 @@ body {
 }
 
 .section h2 {
-    font-size: 28px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #000;
 }
 
 .section p {
-    font-size: 16px;
+    font-size: 1.1rem;
     margin-bottom: 20px;
     color: #555;
 }
@@ -194,7 +139,7 @@ body {
 .cards {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -207,21 +152,28 @@ body {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
 .card h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 15px 0;
     color: #000;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 1rem;
     color: #555;
 }
 
@@ -233,13 +185,39 @@ body {
     color: #fff;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 .card a:hover {
     background-color: #8e6d4e;
 }
 
-/* Full-width and full-screen image for Bridal Jewels and Bridal Guide */
+/* Jewel Cards */
+.jewel-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.jewel-card {
+    width: 250px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.jewel-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.jewel-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Full-width and full-screen image */
 .full-width-img {
     width: 100%;
     height: auto;
@@ -253,13 +231,15 @@ body {
     border-radius: 10px;
 }
 
-/* Styling for the Find Salon Section with store image */
+/* Find Salon Section */
 .find-salon {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    padding: 50px 20px;
+    background-color: #f7f4ee;
 }
 
 .find-salon-text {
@@ -270,10 +250,12 @@ body {
 
 .store-img {
     flex: 1 1 45%;
+    text-align: center;
 }
 
 .store-img img {
     width: 100%;
+    max-width: 450px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -284,6 +266,7 @@ body {
     color: #fff;
     font-family: "EB Garamond", serif;
     padding: 40px 20px;
+    text-align: center;
 }
 
 .footer-container {
@@ -294,12 +277,7 @@ body {
     align-items: center;
 }
 
-/* Language Section */
-.footer-language {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
+/* Footer Language */
 .footer-language span {
     font-size: 1rem;
     font-weight: 600;
@@ -319,76 +297,15 @@ body {
     margin: 10px auto;
 }
 
-/* Footer Columns */
-.footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: left;
-    width: 100%;
-}
-
-.footer-column {
-    flex: 1 1 22%;
-    margin-bottom: 20px;
-}
-
-.footer-column h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #d3a35e;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin: 5px 0;
-}
-
-.footer-column ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-    color: #d3a35e;
-}
-
 /* Social Icons */
-.footer-social {
-    flex: 1 1 22%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
 .social-icons img {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s;
 }
 
 .social-icons img:hover {
     transform: scale(1.1);
-}
-
-/* Footer Bottom */
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    color: #d3a35e;
-    font-size: 1rem;
 }
 
 /* Media Queries */
@@ -402,25 +319,28 @@ body {
         width: 90%;
     }
 
+    .hero {
+        height: 300px;
+    }
+
     .hero-overlay h1 {
-        font-size: 28px;
+        font-size: 2rem;
     }
 
     .hero-overlay p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
-    .footer-columns {
+    .find-salon {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .footer-column {
-        flex: 1 1 100%;
+    .find-salon-text {
+        text-align: center;
     }
 
-    .social-icons {
-        justify-content: center;
+    .store-img img {
+        max-width: 300px;
     }
 }
