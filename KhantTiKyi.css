@@ -45,9 +45,9 @@ body {
 /* Navbar styling for desktop */
 .custom-navbar {
     position: sticky;
-    top: 0; /* Sticks to the top */
-    z-index: 1030; /* Ensures it stays above other elements */
-    background-color: #f7e9d1; /* Background color to avoid transparency issues */
+    top: 0;
+    z-index: 1030;
+    background-color: #f7e9d1;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
     padding: 10px 0;
@@ -84,19 +84,18 @@ body {
 
 /* Mobile-specific styles */
 .mobile-menu-icon {
-    display: none; /* Hide by default */
+    display: none;
     font-size: 1.5rem;
     cursor: pointer;
     padding: 10px;
 }
 
 @media (max-width: 768px) {
-    /* Hide the desktop navbar, dividers, and logo */
     .divider-container,
     .custom-navbar {
         display: none;
     }
-    /* Show the mobile menu icon only on mobile */
+
     .mobile-menu-icon {
         display: inline-block;
         position: absolute;
@@ -152,7 +151,7 @@ body {
 }
 
 .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -240,135 +239,157 @@ body {
     background-color: #8e6d4e;
 }
 
+/* Full-width and full-screen image for Bridal Jewels and Bridal Guide */
+.full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.full-screen-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Styling for the Find Salon Section with store image */
+.find-salon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.find-salon-text {
+    flex: 1 1 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.store-img {
+    flex: 1 1 45%;
+}
+
+.store-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer Styling */
 .footer {
-    background-color: #2b251f; /* Dark background */
+    background-color: #2b251f;
     color: #fff;
     font-family: "EB Garamond", serif;
     padding: 40px 20px;
-    }
-    
-    .footer-container {
+}
+
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
-    
-    /* Language Section */
-    .footer-language {
+}
+
+/* Language Section */
+.footer-language {
     text-align: center;
     margin-bottom: 40px;
-    }
-    
-    .footer-language span {
+}
+
+.footer-language span {
     font-size: 1rem;
     font-weight: 600;
-    }
-    
-    .footer-language p {
+}
+
+.footer-language p {
     margin: 10px 0;
     font-size: 1rem;
     font-weight: bold;
     color: #d3a35e;
-    }
-    
-    .golden-line {
+}
+
+.golden-line {
     width: 80px;
     height: 2px;
     background-color: #d3a35e;
     margin: 10px auto;
-    }
-    
-    /* Footer Columns */
-    .footer-columns {
+}
+
+/* Footer Columns */
+.footer-columns {
     display: flex;
-    flex-wrap: wrap; /* Wraps for mobile */
+    flex-wrap: wrap;
     justify-content: space-between;
     text-align: left;
     width: 100%;
-    }
-    
-    .footer-column {
-    flex: 1 1 22%; /* Equal width on desktop */
+}
+
+.footer-column {
+    flex: 1 1 22%;
     margin-bottom: 20px;
-    }
-    
-    .footer-column h3 {
+}
+
+.footer-column h3 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #d3a35e;
-    }
-    
-    .footer-column ul {
+}
+
+.footer-column ul {
     list-style: none;
     padding: 0;
-    }
-    
-    .footer-column ul li {
+}
+
+.footer-column ul li {
     margin: 5px 0;
-    }
-    
-    .footer-column ul li a {
+}
+
+.footer-column ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
-    }
-    
-    .footer-column ul li a:hover {
+}
+
+.footer-column ul li a:hover {
     color: #d3a35e;
-    }
-    
-    /* Social Icons */
-    .footer-social {
+}
+
+/* Social Icons */
+.footer-social {
     flex: 1 1 22%;
     margin-bottom: 20px;
     text-align: center;
-    }
-    
-    .social-icons {
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    }
-    
-    .social-icons img {
+}
+
+.social-icons img {
     width: 44px;
     height: 44px;
     transition: transform 0.3s;
-    }
-    
-    .social-icons img:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    }
-    
-    /* Footer Bottom */
-    .footer-bottom {
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
     text-align: center;
     margin-top: 20px;
     color: #d3a35e;
     font-size: 1rem;
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 768px) {
-    .footer-columns {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    }
-    
-    .footer-column {
-    flex: 1 1 100%; /* Full width for mobile */
-    }
-    
-    .social-icons {
-    justify-content: center;
-    }
-    }
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -387,5 +408,19 @@ body {
 
     .hero-overlay p {
         font-size: 16px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
