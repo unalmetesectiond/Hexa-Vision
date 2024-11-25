@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexa-Vision Header with Sticky Navbar</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <!-- Google Fonts link for EB Garamond -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap"
+    />
+
+    <link rel="stylesheet" type="text/css" href="Nirvair-Singh-Sahi.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="custom-header">
+      <!-- Mobile menu icon for opening sidebar in mobile view -->
+      <span class="mobile-menu-icon" onclick="openSidebar()">&#9776;</span>
+      <h1>HEXA-VISION</h1>
+      <div class="divider-container">
+        <div class="divider-line"></div>
+        <div class="logo-container">
+          <!-- SVG logo embedded here -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 28 43"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M20.63 0H7.198L6.17.426.427 6.14 0 7.164v28.183l.427 1.023 5.744 5.716 1.027.424H20.68l1.026-.424 5.742-5.716.428-1.023V7.164L27.45 6.14 21.708.426 20.682 0h-.052zm-.054.526l.838.343 5.592 5.568.344.832v27.97l-.344.833-5.592 5.568-.838.342H7.305l-.838-.342-5.592-5.568-.348-.833V7.27l.348-.832L6.467.87l.838-.343h13.27zm-2.3 9.382l.014-.005c.053 0 .095-.04.095-.092V9.7c0-.05-.042-.093-.095-.093h-.43V9.6h-1.275v.003h-.437c-.054 0-.095.04-.095.093v.1c0 .05.04.095.095.095l.013.005c.232 0 .42.186.42.416l.005-.018V14.2h-.005c0 .257-.17.46-.386.48h-4.5c-.206-.018-.372-.2-.386-.45V10.3a.42.42 0 0 1 .418-.391l.014-.005c.054 0 .096-.04.096-.092V9.7c0-.05-.042-.093-.096-.093h-.43V9.6h-1.274v.003H9.6c-.054 0-.095.04-.095.093v.1c0 .05.04.095.095.095l.013.005a.42.42 0 0 1 .419.416l.004-.018-.004 9.673a.42.42 0 0 1-.419.416L9.6 20.4c-.054 0-.095.04-.095.093v.1c0 .048.04.092.095.092h.436v.002h1.705c.054 0 .096-.042.096-.093v-.1c0-.053-.042-.096-.096-.096h-.014a.42.42 0 0 1-.418-.39v-4.236c.014-.218.15-.398.33-.44h4.62c.2.045.332.24.332.474l.005-.012v4.2l-.005-.02c0 .23-.187.416-.42.416l-.013.007c-.054 0-.095.04-.095.093v.1c0 .048.04.092.095.092h.437v.002h1.706c.053 0 .095-.042.095-.093v-.1c0-.053-.042-.096-.095-.096h-.014a.42.42 0 0 1-.417-.4V10.3c.01-.217.194-.4.417-.4M21.8 23.34h-1.97a.1.1 0 0 0-.096.096v.1c0 .053.046.093.096.093l.35.003h.054c.18 0 .2.057.1.327l-3.04 7.46s-.066.15-.194.15c-.115 0-.194-.123-.2-.147l-1.876-4.142 1.386-3.45s.1-.23.6-.23l.114-.002c.053 0 .095-.04.095-.096v-.1c0-.05-.042-.093-.095-.093H15.12c-.05 0-.094.044-.094.093v.1c0 .054.043.096.094.096l.35.002h.054c.182 0 .202.057.093.328l-.945 2.328c-.014.018-.036.038-.07.038s-.064-.03-.074-.048L13.43 23.83c-.13-.233-.05-.23.125-.23h.28l.2-.002c.05 0 .095-.04.095-.096v-.1c0-.05-.044-.093-.095-.093h-2.7c-.054 0-.1.044-.1.093v.1c0 .054.046.096.1.096l.114.002c.372 0 .47.242.47.242l1.975 4.307-1.362 3.348c-.035.04-.098.1-.173.1-.12 0-.175-.153-.175-.153s-.007.007-.015.02L8.4 24.116c-.087-.212-.27-.502-.096-.502h.28l.2-.002c.053 0 .098-.04.098-.096v-.1c0-.05-.045-.093-.098-.093H6.088c-.05 0-.094.044-.094.093v.1c0 .054.042.096.094.096l.116.002c.368 0 .467.242.467.242L11.93 34.3l.017.043s.034.06.088.06.1-.013.118-.06v.01l2.14-5.322 2.398 5.23.027.08s.03.058.087.058.1-.012.122-.062c.003-.005.01-.025.014-.052l4.138-10.4s.093-.23.594-.23l.114-.003c.05 0 .094-.04.094-.093v-.1c0-.05-.044-.096-.094-.096m-1.27-21.525l-.436-.002H7.36l-5.513 5.5v27.858l5.513 5.5h13.158l5.512-5.5V7.325L20.518 1.84zm4.34 32.43v.382l-4.82 4.797H7.86L3.04 34.65V7.765l4.82-4.798h12.178l4.82 4.798V34.27z"
+            ></path>
+          </svg>
+        </div>
+        <div class="divider-line"></div>
+      </div>
+    </header>
+
+    <!-- Sticky Navbar Section for Desktop -->
+    <nav class="custom-navbar sticky-top">
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/Nirvair-Singh-Sahi.html" class="nav-link">THE HOUSE</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/HighJewelry.html" class="nav-link">HIGH JEWELRY</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/KhantTiKyi.html" class="nav-link">ENGAGEMENT & BRIDAL</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/AmirAlipour.html" class="nav-link">WATCHES</a>
+      <a href="#" class="nav-link">ACCESSORIES</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/Services(Lou).html" class="nav-link">SERVICES</a>
+    </nav>
+
+    <!-- Sidebar for Mobile View -->
+    <div id="sidebar" class="sidebar">
+      <span class="close-btn" onclick="closeSidebar()">&times;</span>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/Nirvair-Singh-Sahi.html">THE HOUSE</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/HighJewelry.html">HIGH JEWELRY</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/KhantTiKyi.html">ENGAGEMENT AND BRIDAL</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/AmirAlipour.html">WATCHES</a>
+      <a href="#">ACCESSORIES</a>
+      <a href="file:///C:/Users/nirva/OneDrive/Documents/GitHub/Hexa-Vision/Services(Lou).html">SERVICES</a>
+    </div>
+
+    <section class="house-section">
+      <div class="image-container">
+        <img
+          src="Nirvair_Singh_Sahi_Images\1-a3728410.png"
+          alt="The House of Harry Winston"
+        />
+      </div>
+      <div class="golden-line"></div>
+      <h2>The House of Hexa Vision</h2>
+      <p>
+        Founded in New York City in 1932, Harry Winston continues to set the
+        standard for the ultimate in fine jewelry and high-end watchmaking.
+        Learn more about our history, news, and global events.
+      </p>
+    </section>
+
+    <!-- Two Sections: King of Diamonds and Mr. Winston -->
+    <section class="dual-section">
+      <!-- King of Diamonds Section -->
+      <div class="card">
+        <div class="card-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\KingOfDiamonds.png"
+            alt="King of Diamonds"
+          />
+        </div>
+        <h2>King of Diamonds</h2>
+        <p>
+          Having once owned more than one-third <br />
+          of the world's most famous gems, Harry Winston <br />
+          was known as the "King of Diamonds."
+        </p>
+        <a href="#" class="discover-link">DISCOVER ></a>
+      </div>
+
+      <!-- History Section -->
+      <div class="card">
+        <div class="card-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\History.png"
+            alt="Mr. Winston"
+          />
+        </div>
+        <h2>History</h2>
+        <p>
+          Harry Winston was a man of many <br />
+          brilliant facets, much like the rare jewels <br />
+          he built his life around.
+        </p>
+        <a href="#" class="discover-link">DISCOVER ></a>
+      </div>
+    </section>
+
+    <!-- Second Dual Section -->
+    <section class="dual-section">
+      <!-- First Card in the Second Section -->
+      <div class="card">
+        <div class="card-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\Archives.png"
+            alt="New Section Image 1"
+          />
+        </div>
+        <h2>Rare Jewels of the World</h2>
+        <p>
+          Exquisite colored gemstones are one of the<br />
+          founding pillars of the House of <br />
+          Harry Wilston.
+        </p>
+        <a href="#" class="discover-link">DISCOVER ></a>
+      </div>
+
+      <!-- Second Card in the Second Section -->
+      <div class="card">
+        <div class="card-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\RareJewelsOfTheWorld.png"
+            alt="New Section Image 2"
+          />
+        </div>
+        <h2>Archives</h2>
+        <p>
+          The Harry Winston archives are an <br />
+          invaluable resource to preserve the<br />
+          legacy of the House.
+        </p>
+        <a href="#" class="discover-link">DISCOVER ></a>
+      </div>
+    </section>
+
+    <!-- Third Dual Section -->
+    <section class="dual-section">
+      <!-- First Card in the Third Section -->
+      <div class="card">
+        <div class="card-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\JewelertotheStars.png"
+            alt="Third Section Image 1"
+          />
+        </div>
+        <h2>Jeweler to the Stars</h2>
+        <p>
+          As “Jeweler to the Stars,” Harry Winston<br />
+          has a long and storied Hollywood <br />
+          History.
+        </p>
+        <a href="#" class="discover-link">DISCOVER ></a>
+      </div>
+
+      <!-- Second Card in the Third Section -->
+      <div class="card">
+        <div class="card-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\News&Events.png"
+            alt="Third Section Image 2"
+          />
+        </div>
+        <h2>News & Events</h2>
+        <p>
+          Discover the latest news and <br />
+          information about the House’s global <br />
+          events.
+        </p>
+        <a href="#" class="discover-link">DISCOVER ></a>
+      </div>
+    </section>
+
+    <!-- Full-Width Individual Section -->
+    <section class="individual-section">
+      <div class="individual-image-container">
+        <img
+          src="Nirvair_Singh_Sahi_Images\herolarged_l1_house_7.png"
+          alt="Our Stones"
+        />
+      </div>
+      <div class="individual-content">
+        <h2>Our Stones</h2>
+        <div class="golden-line"></div>
+        <p>
+          Even Harry Winston jewel begins with a diamond or colored gemstone of
+          exceptional quality, and in the hands of the House’s master craftsmen
+          their inherent beauty and brilliance is brought to life in a way never
+          before seen.
+        </p>
+        <a href="#" class="discover-btn">DISCOVER</a>
+      </div>
+    </section>
+
+    <!-- Individual Section 2 -->
+    <section class="individual-section">
+      <div class="individual-image-container">
+        <img
+          src="Nirvair_Singh_Sahi_Images\herolarged_l1_house_8.jpg"
+          alt="Craftsmanship"
+        />
+      </div>
+      <div class="individual-content">
+        <h2>Our Craftsmanship</h2>
+        <div class="golden-line"></div>
+        <p>
+          At Harry Winston, craftsmanship is a deeply cherished value. Each
+          piece is expertly created with a dedication to exceptional artistry
+          and attention to detail.
+        </p>
+        <a href="#" class="discover-btn">DISCOVER</a>
+      </div>
+    </section>
+
+    <!-- Individual Section 3 -->
+    <section class="individual-section">
+      <div class="individual-image-container">
+        <img
+          src="Nirvair_Singh_Sahi_Images\herolarged_l1_house_9.png"
+          alt="Legacy of Brilliance"
+        />
+      </div>
+      <div class="individual-content">
+        <h2>Our Design</h2>
+        <div class="golden-line"></div>
+        <p>
+          The House of Harry Winston has built a legacy defined by extraordinary
+          jewelry and timepieces that exemplify unparalleled brilliance and
+          beauty.
+        </p>
+        <a href="#" class="discover-btn">DISCOVER</a>
+      </div>
+    </section>
+
+    <!-- Savoir-Faire Section -->
+    <section class="savoir-section">
+      <div class="savoir-container">
+        <!-- Text Content -->
+        <div class="savoir-content">
+          <h2>Savoir-Faire & Métiers d'Art</h2>
+          <div class="golden-line"></div>
+          <p>
+            Harry Winston Timepieces push creative bounds and underscore the
+            House's commitment to only the exceptional.
+          </p>
+          <a href="#" class="discover-btn">DISCOVER</a>
+        </div>
+        <!-- Image Content -->
+        <div class="savoir-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\sbs_l1_house_10.png"
+            alt="Savoir-Faire & Métiers d'Art"
+          />
+        </div>
+      </div>
+      <!-- Decorative Line and Icon -->
+      <div class="savoir-bottom-line">
+        <span class="golden-line"></span>
+        <img src="Nirvair_Singh_Sahi_Images\icon-rosette.svg" alt="Rosette Icon" class="rosette-icon" />
+        <span class="golden-line"></span>
+      </div>
+    </section>
+
+    <!-- Find My Hexa Vision Section -->
+    <section class="hexa-vision-section">
+      <div class="hexa-vision-container">
+        <!-- Image Content -->
+        <div class="hexa-vision-image-container">
+          <img
+            src="Nirvair_Singh_Sahi_Images\find-my-harry-winston.png"
+            alt="Find My Hexa Vision"
+          />
+        </div>
+        <!-- Text Content -->
+        <div class="hexa-vision-content">
+          <h2>Find My Hexa Vision</h2>
+          <p>
+            We look forward to welcoming you to the extraordinary world of Hexa
+            Vision, where our legacy becomes yours.
+          </p>
+          <a href="#" class="discover-btn">FIND A SALON</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Change Language -->
+        <div class="footer-language">
+          <span>Change Language</span>
+          <p>ENGLISH</p>
+          <div class="golden-line"></div>
+        </div>
+
+        <!-- Footer Columns -->
+        <div class="footer-columns">
+          <!-- Services -->
+          <div class="footer-column">
+            <h3>SERVICES</h3>
+            <ul>
+              <li><a href="#">Schedule an Appointment</a></li>
+              <li><a href="#">Request Assistance</a></li>
+              <li><a href="#">Subscribe to Newsletters</a></li>
+              <li><a href="#">Explore our Catalog</a></li>
+            </ul>
+          </div>
+
+          <!-- Corporate -->
+          <div class="footer-column">
+            <h3>CORPORATE</h3>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Philanthropy</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal Terms -->
+          <div class="footer-column">
+            <h3>LEGAL TERMS</h3>
+            <ul>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Notice</a></li>
+              <li><a href="#">Supply Chain</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="footer-social">
+            <h3>FOLLOW US</h3>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/story.php/?story_fbid=1670602513233142&id=1670578309902229&_rdr"
+                ><img
+                  src="Nirvair_Singh_Sahi_Images\facebook.png"
+                  alt="Facebook"
+              /></a>
+              <a href="https://www.instagram.com/hexavision_enhancement/"
+                ><img
+                  src="Nirvair_Singh_Sahi_Images\instagram.png"
+                  alt="Instagram"
+              /></a>
+              <a href="https://x.com/i/flow/login?redirect_after_login=%2Fhexacc"
+                ><img
+                  src="Nirvair_Singh_Sahi_Images\twitter.png"
+                  alt="X"
+              /></a>
+              <a href="https://www.pinterest.com/pin/eye-logo-in-2024--818388563566270932/"
+                ><img
+                  src="Nirvair_Singh_Sahi_Images\pinterest.png"
+                  alt="Pinterest"
+              /></a>
+              <a href="https://www.linkedin.com/company/joinhexa"
+                ><img
+                  src="Nirvair_Singh_Sahi_Images/linkedin.png"
+                  alt="LinkedIn"
+              /></a>
+              <a href="https://www.youtube.com/channel/UC98o6FhZ1cfsNxGN3Cf_0bQ"
+                ><img
+                  src="Nirvair_Singh_Sahi_Images\youtube.png"
+                  alt="YouTube"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>Hexa Vision, Inc. 2024</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+      function openSidebar() {
+        document.getElementById("sidebar").style.width = "250px";
+      }
+      function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+      }
+    </script>
+
+    <!-- Bootstrap JavaScript (Optional) -->
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
