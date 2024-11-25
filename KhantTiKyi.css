@@ -17,7 +17,7 @@ body {
 .custom-header {
     background-color: #f7e9d1;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     font-family: "Times New Roman", Times, serif;
     position: relative;
     z-index: 1000;
@@ -26,7 +26,7 @@ body {
 .custom-header h1 {
     font-family: "EB Garamond", serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0;
 }
 
@@ -34,20 +34,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .divider-line {
-    border-top: 1px solid #d3a35e;
+    border-top: 2px solid #d3a35e;
     margin: 5px 20px;
     flex: 1;
 }
 
-/* Navbar styling for desktop */
+/* Navbar styling */
 .custom-navbar {
     position: sticky;
-    top: 0; /* Sticks to the top */
-    z-index: 1030; /* Ensures it stays above other elements */
-    background-color: #f7e9d1; /* Background color to avoid transparency issues */
+    top: 0;
+    z-index: 1030;
+    background-color: #f7e9d1;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
     padding: 10px 0;
@@ -55,90 +56,18 @@ body {
 }
 
 .custom-navbar .nav-link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #000;
     text-decoration: none;
     margin: 0 15px;
     display: inline-block;
+    transition: color 0.3s, transform 0.2s;
 }
 
 .custom-navbar .nav-link:hover {
-    color: #000;
-}
-
-.custom-navbar .nav-link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #d3a35e;
-    margin-top: 5px;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-}
-
-.custom-navbar .nav-link:hover::after {
-    transform: scaleX(1);
-}
-
-/* Mobile-specific styles */
-.mobile-menu-icon {
-    display: none; /* Hide by default */
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    /* Hide the desktop navbar, dividers, and logo */
-    .divider-container,
-    .custom-navbar {
-        display: none;
-    }
-    /* Show the mobile menu icon only on mobile */
-    .mobile-menu-icon {
-        display: inline-block;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-    }
-}
-
-/* Sidebar menu for mobile */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #808080;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1001;
-}
-
-.sidebar a {
-    padding: 8px 16px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: "EB Garamond", serif;
-    color: #000;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
     color: #d3a35e;
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -148,11 +77,10 @@ body {
     color: #fff;
     padding: 50px 20px;
     background: url('Khant_images/main\ pic.webp') center/cover no-repeat;
-    height: 400px;
 }
 
 .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -165,12 +93,27 @@ body {
 }
 
 .hero-overlay h1 {
-    font-size: 36px;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .hero-overlay p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #d3a35e;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #b08d5c;
 }
 
 /* Section Styling */
@@ -180,13 +123,13 @@ body {
 }
 
 .section h2 {
-    font-size: 28px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #000;
 }
 
 .section p {
-    font-size: 16px;
+    font-size: 1.1rem;
     margin-bottom: 20px;
     color: #555;
 }
@@ -195,7 +138,7 @@ body {
 .cards {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -208,21 +151,28 @@ body {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
 .card h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 15px 0;
     color: #000;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 1rem;
     color: #555;
 }
 
@@ -234,15 +184,132 @@ body {
     color: #fff;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 .card a:hover {
     background-color: #8e6d4e;
 }
 
+/* Jewel Cards */
+.jewel-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.jewel-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.jewel-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.jewel-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.jewel-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.jewel-card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d3a35e;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.jewel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.jewel-card a:hover {
+    background-color: #b08d5c;
+}
+
+@media (max-width: 768px) {
+    .jewel-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jewel-card {
+        width: 90%; /* Adjusts the card width for smaller screens */
+    }
+}
+
+
+/* Full-width and full-screen image */
+.full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.full-screen-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Find Salon Section */
+.find-salon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #f7f4ee;
+}
+
+.find-salon-text {
+    flex: 1 1 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.store-img {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.store-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer Styling */
 .footer {
-    background-color: #2b251f; /* Dark background */
+    background-color: #36332D; /* Dark background */
     color: #fff;
     font-family: "EB Garamond", serif;
     padding: 40px 20px;
@@ -284,14 +351,14 @@ body {
     /* Footer Columns */
     .footer-columns {
     display: flex;
-    flex-wrap: wrap; /* Wraps for mobile */
+    flex-wrap: wrap; 
     justify-content: space-between;
     text-align: left;
     width: 100%;
     }
     
     .footer-column {
-    flex: 1 1 22%; /* Equal width on desktop */
+    flex: 1 1 22%;
     margin-bottom: 20px;
     }
     
@@ -342,7 +409,7 @@ body {
     }
     
     .social-icons img:hover {
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1); 
     }
     
     /* Footer Bottom */
@@ -362,14 +429,14 @@ body {
     }
     
     .footer-column {
-    flex: 1 1 100%; /* Full width for mobile */
+    flex: 1 1 100%; 
     }
     
     .social-icons {
     justify-content: center;
     }
     }
-
+  
 /* Media Queries */
 @media (max-width: 768px) {
     .cards {
@@ -381,11 +448,28 @@ body {
         width: 90%;
     }
 
+    .hero {
+        height: 300px;
+    }
+
     .hero-overlay h1 {
-        font-size: 28px;
+        font-size: 2rem;
     }
 
     .hero-overlay p {
-        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .find-salon {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .find-salon-text {
+        text-align: center;
+    }
+
+    .store-img img {
+        max-width: 300px;
     }
 }
