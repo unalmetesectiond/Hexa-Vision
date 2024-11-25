@@ -17,42 +17,32 @@ body {
 .custom-header {
     background-color: #f7e9d1;
     text-align: center;
-    padding: 20px 0;
-    font-family: "EB Garamond", serif;
+    padding: 5px 0;
+    font-family: "Times New Roman", Times, serif;
     position: relative;
-}
-
-.custom-header h1 {
+    z-index: 1000;
+  }
+  .custom-header h1 {
+    font-family: "EB Garamond", serif;
     font-weight: 600;
-    font-size: 2.5rem;
-    margin: 0;
-    color: #333; /* Add contrast to the text */
-}
-
-.divider-container {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .divider-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Add space between elements */
-    margin-top: 10px;
-}
-
-.divider-line {
+  }
+  .divider-line {
     border-top: 1px solid #d3a35e;
-    width: 100px;
-}
+    margin: 5px 20px;
+    flex: 1;
+  }
+  .logo-container {
+    display: inline-block;
+    padding: 5px;
+  }
 
-.logo-container {
-    padding: 0 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.logo-container svg {
-    fill: #d3a35e;
-    width: 50px;
-    height: 50px;
-}
 
 
 /* Updated Navbar Styling */
