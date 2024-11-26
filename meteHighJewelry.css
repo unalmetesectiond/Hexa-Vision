@@ -64,8 +64,6 @@ body {
     transition: color 0.3s ease;
 }
 
-
-
 .custom-navbar .nav-link::after {
     content: "";
     display: block;
@@ -81,7 +79,7 @@ body {
     transform: scaleX(1);
 }
 
-/* Sidebar for Mobile */
+/* Sidebar */
 .sidebar {
     height: 100%;
     width: 0;
@@ -91,14 +89,14 @@ body {
     background-color: #808080;
     overflow-x: hidden;
     transition: 0.3s ease-in-out;
-    z-index: 1100;
+    z-index: 1200;
     padding-top: 60px;
 }
 
 .sidebar a {
     display: block;
     font-size: 1rem;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     padding: 10px 20px;
     transition: color 0.3s;
@@ -110,10 +108,11 @@ body {
 
 .sidebar .close-btn {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+    color: #fff;
 }
 
 /* Mobile Header Adjustments */
@@ -312,7 +311,7 @@ body {
     flex: 1 1 22%;
     margin-bottom: 20px;
     text-align: center;
-    }
+}
 
 .footer-social img {
     width: 44px;
@@ -324,25 +323,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Responsive Footer Design */
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-}
-
-/* Responsive Design for Showcase */
+/* Responsive Design for Showcase and Footer */
 @media (max-width: 768px) {
     .showcase img {
         max-height: 300px;
@@ -353,24 +334,6 @@ body {
         gap: 10px;
     }
 
-    .find-my-hexa-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .find-my-hexa-text {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .find-my-hexa-text h2 {
-        font-size: 1.5em;
-    }
-
-    .find-my-hexa-text p {
-        font-size: 0.9em;
-    }
-
     .footer-columns {
         flex-direction: column;
         align-items: center;
@@ -386,21 +349,6 @@ body {
         justify-content: center;
     }
 }
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    }
-    
-    .social-icons img {
-    width: 44px;
-    height: 44px;
-    transition: transform 0.3s;
-    }
-    
-    .social-icons img:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    }
 
 /* Find My Hexa Vision Section */
 .find-my-hexa {
@@ -461,29 +409,21 @@ body {
     color: #fff;
 }
 
-/* Footer Language Section */
-.footer-language {
-    text-align: center;
-    margin-bottom: 40px;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-.footer-language span {
-    font-size: 1rem;
-    font-weight: 600;
+.social-icons img {
+    width: 44px;
+    height: 44px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.footer-language p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #d3a35e;
-    margin: 10px 0;
-}
-
-.golden-line {
-    width: 80px;
-    height: 2px;
-    background-color: #d3a35e;
-    margin: 10px auto;
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
 /* Buttons Across Site */
@@ -503,56 +443,4 @@ body {
 .find-my-hexa-text button:hover {
     background-color: #d3a35e;
     color: #fff;
-}
-
-/* Social Media Icon Transitions */
-.footer-social img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.footer-social img:hover {
-    transform: scale(1.1);
-}
-
-/* Sidebar Transitions */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #808080;
-    overflow-x: hidden;
-    transition: 0.3s ease-in-out;
-    z-index: 1200;
-    padding-top: 60px;
-}
-
-.sidebar a {
-    display: block;
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: color 0.3s;
-}
-
-.sidebar a:hover {
-    color: #d3a35e;
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #fff;
-}
-
-/* Mobile-Specific Adjustments */
-@media (max-width: 768px) {
-    .sidebar a {
-        font-size: 1rem;
-    }
 }
