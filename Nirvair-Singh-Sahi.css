@@ -198,7 +198,7 @@ transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transitions */
 }
 
 .card:hover {
-transform: translateY(-10px); /* Slight upward movement */
+transform: translateY(-10px); /* Slightly upward movement */
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
