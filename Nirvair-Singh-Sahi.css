@@ -208,7 +208,7 @@ height: 450px; /* Adjusted height to make cards fit better */
 overflow: hidden;
 border-radius: 20px;
 margin-bottom: 20px;
-transition: transform 0.3s; /* Smooth zoom-in effect on hover */
+transition: transform 0.8s; /* Smooth zoom-in effect on hover */
 }
 
 .card:hover .card-image-container img {
