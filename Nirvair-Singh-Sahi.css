@@ -140,7 +140,7 @@
     width: 80em; /* Length of the line */
     height: 2px; /* Thickness of the line */
     background-color: #d3a35e; /* Golden color */
-    margin: 15px auto; /* Center the line and add spacing */
+    margin: 15px auto; /* Centers the line and adds spacing */
   }
 
   .house-section h2 {
