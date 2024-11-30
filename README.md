@@ -1,13 +1,13 @@
 
-1. Website Purpose 
+1. Website Purpose <br>
 Hexa-Vision aims to be an elegant and functional platform for showcasing and selling fine jewelry. 
 The website is designed to provide a premium user experience, enabling visitors to explore 
 collections, learn about craftsmanship, and make secure purchases. 
-2. Target Audience 
+2. Target Audience <br>
 • Jewelry Enthusiasts: Individuals seeking unique or custom-made jewelry pieces. 
 • Gift Shoppers: Customers looking for high-quality gifts for special occasions. 
 • Luxury Buyers: People interested in premium, high-end jewelry. 
-3. Key Features and Functionalities 
+3. Key Features and Functionalities <br>
 • Product Galleries: High-resolution images and videos of jewelry items with detailed 
 descriptions. 
 • E-commerce Integration: Shopping cart, secure checkout, and multiple payment options. 
@@ -16,7 +16,7 @@ descriptions.
 preferences. 
 • Responsive Design: Optimized for seamless browsing across devices. 
 • Blog Section: Insights into jewelry trends, care tips, and behind-the-scenes craftsmanship. 
-4. Specific Requirements for Content or Interactivity 
+4. Specific Requirements for Content or Interactivity <br>
 • High-Quality Visuals: Professional images and 360-degree views for showcasing intricate 
 details. 
 • Interactive Features: Personalized recommendations, wishlists, and AR-enabled try-ons. 
