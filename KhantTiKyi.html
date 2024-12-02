@@ -42,6 +42,16 @@
         <a href="#" class="nav-link">ACCESSORIES</a>
         <a href="./LouFiles/Services(Lou).html" class="nav-link">SERVICES</a>
     </nav>
+        <!-- Sidebar for Mobile View -->
+        <div id="sidebar" class="sidebar">
+            <span class="close-btn" onclick="closeSidebar()">&times;</span>
+            <a href="./Nirvair-Singh-Sahi.html">THE HOUSE</a>
+            <a href="./meteHighJewelry.html">HIGH JEWELRY</a>
+            <a href="./KhantTiKyi.html">ENGAGEMENT & BRIDAL</a>
+            <a href="./AmirAlipour.html">WATCHES</a>
+            <a href="#">ACCESSORIES</a>
+            <a href="./LouFiles/Services(Lou).html">SERVICES</a>
+          </div>
      
     <!-- Hero Section -->
 <!-- Engagement & Bridal Section -->
@@ -210,5 +220,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function openSidebar() {
+          document.getElementById("sidebar").style.width = "250px";
+        }
+        function closeSidebar() {
+          document.getElementById("sidebar").style.width = "0";
+        }
+      </script>
+
 </body>
 </html>
