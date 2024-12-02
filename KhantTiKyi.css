@@ -254,6 +254,89 @@ body {
     background-color: #8e6d4e;
 }
 
+.bridal-guide-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+}
+
+.bridal-guide-section .guide-image {
+    flex: 1;
+    max-width: 50%; /* Adjust width to balance layout */
+    position: relative; /* Necessary for animation */
+}
+
+.bridal-guide-section .guide-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInImage 1.5s ease-out; /* Add fade-in animation */
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bridal-guide-section .guide-text {
+    flex: 1;
+    max-width: 50%; /* Adjust width to balance layout */
+    text-align: left;
+    color: #555;
+}
+
+.bridal-guide-section .guide-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.bridal-guide-section .guide-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.bridal-guide-section .guide-text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d3a35e;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.bridal-guide-section .guide-text a:hover {
+    background-color: #b08d5c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bridal-guide-section {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center; /* Center-align text */
+    }
+
+    .bridal-guide-section .guide-image,
+    .bridal-guide-section .guide-text {
+        max-width: 100%;
+    }
+
+    .bridal-guide-section .guide-text {
+        text-align: center;
+    }
+}
+
 /* Jewel Cards */
 .jewel-cards {
     display: flex;
