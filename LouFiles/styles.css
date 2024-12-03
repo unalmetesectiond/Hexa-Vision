@@ -1,3 +1,4 @@
+/*Lou Stylesheet */
 .custom-header {
     background-color: #f7e9d1;
     text-align: center;
@@ -64,6 +65,15 @@
   }
   .custom-navbar .nav-link:hover::after {
     transform: scaleX(1);
+  }
+
+   /* Active Button Styling */
+   .custom-navbar .nav-link.active {
+    color: #000; 
+  }
+  
+  .custom-navbar .nav-link.active::after {
+    transform: scaleX(1); 
   }
   
   /* Mobile-specific styles */
@@ -170,6 +180,7 @@
     right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+    padding-top: 60px;
   }
   
   /*body */
