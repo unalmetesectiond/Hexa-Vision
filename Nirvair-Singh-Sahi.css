@@ -3,7 +3,7 @@
     background-color: #f7e9d1;
     text-align: center;
     padding: 5px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'EB Garamond', serif;
     position: relative;
     z-index: 1000;
   }
@@ -34,7 +34,7 @@
     top: 0; /* Sticks to the top */
     z-index: 1030; /* Ensures it stays above other elements */
     background-color: #f7e9d1; /* Background color to avoid transparency issues */
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'EB Garamond', serif;
     text-align: center;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
