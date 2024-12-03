@@ -23,10 +23,22 @@ function openSidebar() {
     });
   });
   
-  document.querySelectorAll('.form-nav-buttons .nav-button').forEach(button => {
-    button.addEventListener('click', () => {
-        document.querySelectorAll('.form-nav-buttons .nav-button').forEach(btn => btn.classList.remove('active'));
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.custom-navbar .nav-link').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.custom-navbar .nav-link').forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
+      });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.form-nav-buttons .nav-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.form-nav-buttons .nav-button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  });
+  
   
