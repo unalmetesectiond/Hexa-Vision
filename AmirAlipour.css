@@ -313,20 +313,21 @@ body {
   }
 
   .branch-item {
-    background-color: #fff;
-    border: 1px solid #e5d6c3;
+    background-color: #eaefef; 
+    border: 1px solid #dcdcdc; 
     border-radius: 10px;
     padding: 20px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
     height: 100px;
   }
 
   .branch-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    background-color: #e0e0e0; 
   }
 
   .branch-item h3 {
@@ -337,7 +338,7 @@ body {
 
   .branch-description {
     font-size: 14px;
-    color: #777;
+    color: #2d2424;
     margin-top: 15px;
     opacity: 0;
     max-height: 0;
