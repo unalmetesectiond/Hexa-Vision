@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     background-color: #fff;
     color: #333;
+    font-family: "EB Garamond, serif";
 }
 
 /* Updated Header Styling */
@@ -18,7 +19,7 @@ body {
     background-color: #f7e9d1;
     text-align: center;
     padding: 5px 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "EB Garamond", serif;
     position: relative;
     z-index: 1000;
   }
@@ -49,7 +50,7 @@ body {
     top: 0; /* Sticks to the top */
     z-index: 1030; /* Ensures it stays above other elements */
     background-color: #f7e9d1; /* Background color to avoid transparency issues */
-    font-family: "Times New Roman", Times, serif;
+    font-family: "EB Garamond", serif;
     text-align: center;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -150,18 +151,21 @@ body {
 .hero-content {
     text-align: center; /* Center-align text */
     margin-top: 20px; /* Add space between the image and text */
+    font-family: "EB Garamond", serif;
 }
 
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #333; /* Adjust color for readability */
+    font-family: "EB Garamond", serif;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: #555; /* Adjust color for readability */
+    font-family: "EB Garamond", serif;
 }
 
 .cta-button {
@@ -173,6 +177,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     transition: background-color 0.3s;
+    font-family: "EB Garamond", serif;
 }
 
 .cta-button:hover {
@@ -189,12 +194,14 @@ body {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #000;
+    font-family: "EB Garamond", serif;
 }
 
 .section p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     color: #555;
+    font-family: "EB Garamond", serif;
 }
 /* Wedding Day Jewels Section */
 .wedding-day-jewels-section {
@@ -207,12 +214,14 @@ body {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 10px;
+    font-family: "EB Garamond", serif;
 }
 
 .jewels-title p {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 40px;
+    font-family: "EB Garamond", serif;
 }
 
 /* Jewels Content */
@@ -222,6 +231,7 @@ body {
     align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap; /* Responsive stacking */
+    font-family: "EB Garamond", serif;
 }
 
 /* Jewel Card */
