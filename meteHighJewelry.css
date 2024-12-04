@@ -329,11 +329,6 @@ body {
         max-height: 300px;
     }
 
-    .sub-collections {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .footer-columns {
         flex-direction: column;
         align-items: center;
@@ -347,6 +342,36 @@ body {
 
     .footer-social {
         justify-content: center;
+    }
+    .sub-collections {
+        flex-direction: column;
+        align-items: center; 
+        gap: 15px; 
+        margin-top: 20px; 
+    }
+
+    .sub-collection-item {
+        width: 90%; 
+        text-align: center;
+    }
+
+    .sub-collection-item img {
+        width: 100%; 
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .sub-collection-item h3 {
+        font-size: 1.2em;
+        color: #000;
+        margin: 10px 0;
+    }
+
+    .sub-collection-item p {
+        font-size: 1em;
+        color: #555;
+        line-height: 1.5;
     }
 }
 
